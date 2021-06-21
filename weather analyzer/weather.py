@@ -5,8 +5,8 @@ from datetime import datetime
 api_key = 'efd1050ba511b5071890a39147d4d653'
 location = input("Enter the city name: ")
 
-complete_apk_link = "https://api.openweathermap.org/data/2.5/weather?q=" + location + "&appid=" + api_key
-api_link = requests.get(complete_apk_link)
+complete_api_link = "https://api.openweathermap.org/data/2.5/weather?q=" + location + "&appid=" + api_key
+api_link = requests.get(complete_api_link)
 api_data = api_link.json()
 
 country = api_data['sys']['country']
@@ -32,7 +32,7 @@ def weather_write_data():   # Function Declaration
     print(f"Current wind speed : {wind_speed} KmPh")
 
     print("-----------------------------------------------------------------")
-    print(f"Complete Link : {complete_apk_link}")
+    print(f"Complete Link : {complete_api_link}")
     print("-----------------------------------------------------------------")
 
 
@@ -53,7 +53,7 @@ file.write(f"Current Humidity : {humid} % \n")
 file.write(f"Current wind speed : {wind_speed} kmph\n")
 
 file.write("-----------------------------------------------------------------\n")
-file.write(f"Complete Link : {complete_apk_link}\n")
+file.write(f"Complete Link : {complete_api_link}\n")
 file.write("-----------------------------------------------------------------\n")
 file.write("\n")
 
