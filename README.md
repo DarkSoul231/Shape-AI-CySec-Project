@@ -1,2 +1,1 @@
-# Shape-AI-CySec-Project
-Shape AI - Python and Cyber Security Bootcamp Project
+# Weather Moniter Script Using Python
